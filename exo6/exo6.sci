@@ -29,7 +29,7 @@ endfunction
 
 
 
-function A= mylu3b1(A)
+function A= mylu(A)
    
     n=size(A,1);
     // on ajoute la partie pivot 
