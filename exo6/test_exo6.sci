@@ -1,0 +1,19 @@
+M1=zeros(2,1);
+B=[3,2;4,5];
+b=[8;6];
+U=zeros(2,2);
+L=zeros(2,2);
+ A=mylu3b(B)
+ disp(A)
+ U=triu(A);
+ disp(U)
+ Z=A-U
+ L=Z+eye(2,2)
+ disp(L)
+ M1=inv(L)*b
+ disp(M1)
+ ereur=B-L*U
+disp(ereur,'erreur:')
+  x=inv(U)*M1
+ disp(x)
+
