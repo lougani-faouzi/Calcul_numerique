@@ -1,4 +1,5 @@
 function exo2(n,ex)
+     
      format("e",ex);
      A = rand(n,n);
      disp("A=",A);
@@ -16,6 +17,7 @@ function exo2(n,ex)
      disp("cap=",capa);
      borne=cond(A)*brelres;
      disp("borne=",borne);
+
 endfunction
 
 
