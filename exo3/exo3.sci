@@ -1,4 +1,5 @@
 function [C] = matmat3b(A,B)
+   
     m=size(A,1);
     n=size(B,2);
     p=size(B,1);
