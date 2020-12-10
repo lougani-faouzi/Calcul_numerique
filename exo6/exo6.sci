@@ -15,6 +15,8 @@ function A= mylu3b(A)
 endfunction
 
 
+
+
 function A= mylu3b1(A)
    
     n=size(A,1);
