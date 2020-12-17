@@ -4,3 +4,5 @@
  val=zeros(2);
  val=Usolve(I,K);
  disp(val)
+
+
