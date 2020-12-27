@@ -52,7 +52,7 @@ int main(int argc,char *argv[])
   /* working array for pivot used by LU Factorization */
   ipiv = (int *) calloc(la, sizeof(int));
 
-  int row = 0; // c'est ici qu'on doit modifier row=1 pour 
+  int row = 1; // c'est ici qu'on doit modifier row=1 pour 
   // que set_GB_operator_rowMajor_poisson1D soit appelée 
 
   if (row == 1){ // LAPACK_ROW_MAJOR
@@ -89,6 +89,10 @@ int main(int argc,char *argv[])
   free(X);
   free(AB);
   free(ipiv);
-
-  printf("\n\n--------- End -----------\n");
+  
+  
+  
+  
+  
+   printf("\n\n--------- End -----------\n");
 }

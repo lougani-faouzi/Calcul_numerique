@@ -194,7 +194,7 @@ double richardson_alpha_opt(int *la){
   double opt;
   opt=eigmin_poisson1D(la);
   opt+=eigmax_poisson1D(la);
-  opt=2.0/alpha_opt;
+  opt=2.0/opt;
   
   return opt;
   
@@ -223,7 +223,7 @@ void richardson_alpha(double *AB, double *RHS, double *X, double *alpha_rich, in
   alpha=-1.0;
   beta=1.0;
   
-  //dgmv('N',la,la,kl,ku,alpha,AB,lab,x,incx,beta,RHS,incy);
+ 
   cblas_dgbmv(CblasColMajor,CblasNoTrans,*la,*la,*kl,*ku,alpha,
   AB,*lab,X,incx,beta,Y,incy);
   normes=cblas_ddot(*la,Y,1,Y,1);

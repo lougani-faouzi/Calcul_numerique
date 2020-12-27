@@ -57,7 +57,7 @@ int main(int argc,char *argv[])
   set_GB_operator_colMajor_poisson1D(AB, &lab, &la, &kv);
   
   /* uncomment the following to check matrix A */
-  // write_GB_operator_colMajor_poisson1D(AB, &lab, &la, "AB.dat");
+   write_GB_operator_colMajor_poisson1D(AB, &lab, &la, "AB.dat");
   
   /********************************************/
   /* Solution (Richardson with optimal alpha) */
@@ -68,13 +68,13 @@ int main(int argc,char *argv[])
   /* Computation of optimum alpha */
 
 
-  //opt_alpha = richardson_alpha_opt(&la);
+  opt_alpha = richardson_alpha_opt(&la);
   printf("TODO Optimal alpha for simple Richardson iteration is : %lf",opt_alpha); 
 
   /* Solve */
   double tol=1e-3;
   int maxit=100;
-  //richardson_alpha(AB, RHS, SOL, &opt_alpha, &lab, &la, &ku, &kl, &tol, &maxit);
+  richardson_alpha(AB, RHS, SOL, &opt_alpha, &lab, &la, &ku, &kl, &tol, &maxit);
 
   /* Write solution */
   write_vec(SOL, &la, "SOL.dat");
